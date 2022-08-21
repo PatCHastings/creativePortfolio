@@ -10,21 +10,30 @@
 <body>
     <div class="wrapper">
         <header>
-            <img src="/images/eagleNebula.jpg" class="background">
-            <img src="/images/fullmoonBlue.png" class="moon">  
-            <img src="/images/crescentMoon.png" class="crescentMoon">
+            
+            <img id="moon" src="/images/fullmoonBlue.png" >  
+            <img id="crescentMoon" src="/images/crescentMoon.png"> 
+            <img src="/images/eagleNebula.jpg" class="background">  
             <div class="foreground">
                 <img src="/images/clouds transp.png" class="clouds">  
-                
+                   
             </div>
             
-            <h1 class="title">Patrick Hastings | Designer</h1>
+            
         </header>
-        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Consequatur iste excepturi magni nulla voluptate, omnis nihil, 
-            aperiam ab dolor ipsum earum praesentium odit reprehenderit enim. 
-            Repellendus perspiciatis odio ea molestias.
-        </section>
+        <h1 class="name">Patrick Hastings</h1>
+        <section>Welcome to my creative portfolio, where anything is possible. In this 
+            space, I will show you some of the work I have done so far, including this 
+            interactive environment using Javascript, CSS, HTML, and anything else I can 
+            think-up and implement. Perhaps I should add a way for the user to input  
+            suggestions they would like to see added or existing things improved upon.
+        </section>  
+        
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+            integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="app.js" type="module"></script>
 </body>
+
 </html>
