@@ -53,11 +53,15 @@ header {
 #moon {
     transform: translateZ(-7px) scale(1.75);
     position: absolute;
+    width: 20%;
     z-index: 1;   
     pointer-events: auto; 
 }
 #moon:hover {
     transform: scale(1.15);
+    position: absolute;
+    width: 20%;
+    z-index: 1;  
     cursor: pointer;
      -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
          filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
@@ -67,6 +71,7 @@ header {
     visibility: hidden;
     transform: rotate(-40deg) translateZ(-7px) scale(1.75);
     position: absolute;
+    width: 20%;
     z-index: 1; 
     pointer-events: auto; 
 }
@@ -93,4 +98,36 @@ section {
     padding: 2rem;
     background-color: transparent;
     color: white;
+}
+
+
+.introTextBox {
+    visibility: hidden;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(64, 30, 255, 0.527) , rgba(31, 0, 168, 0.527));
+    
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+    box-shadow: 5px 5px 3px Black;
+}
+.introTextBox .defaultHeadshot {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+	
+}
+.introTextBox .introText {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    width: 65%;
+    top: 15%;
+    word-wrap: break-word;
+    
+
+    
 }
