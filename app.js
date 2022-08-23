@@ -1,3 +1,5 @@
+import Elements from "./elements.js"
+
 const fullmoonEl = document.querySelector("#moon");
 const crescentMoonEl = document.getElementById("crescentMoon");
 
@@ -15,22 +17,24 @@ moonButton.addEventListener("click", ()=> {
         let crescentmoonButton = document.getElementById('crescentMoon'); 
         crescentmoonButton.addEventListener("click", ()=> {
             console.log("ello gov");
+            introBoxHide();
             document.querySelector("#moon").style.visibility="visible";  
             document.querySelector("#crescentMoon").style.visibility="hidden";  
+            
         })
     }
 })
 
 
-class Elements {
-    constructor() {
-        this._active == true; 
-    }
-}
+
 function introBox() {
-    const tl = gsap.timeline({ defaults: { duration: 2 } })
-        document.querySelector(".introTextBox").style.visibility="visible";
-        tl.to('.introTextBox', { duration: 2.5, ease: CustomEase.create("custom", "M0,0 C0.11,0.494 0.074,0.914 0.2,1 0.354,1.105 0.504,1 1,1 "), y: -500 });
+    const tl = gsap.timeline({ defaults: { duration: 1 } })
+    document.querySelector(".introTextBox").style.visibility="visible";
+    tl.to('.introTextBox', {x: '+=-50px', ease: "power4.out", opacity: 1 })
+}
+function introBoxHide() {
+    const t2 = gsap.timeline({ defaults: {duration: 1} })
+    t2.to('.introTextBox', {x: '+=50px', ease: "power4.out", opacity: 0 })
 }
 
 
