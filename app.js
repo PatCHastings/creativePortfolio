@@ -5,8 +5,6 @@ const crescentMoonEl = document.getElementById("crescentMoon");
 
 
 
-
-
 let moonButton = document.getElementById('moon'); 
 moonButton.addEventListener("click", ()=> {
     console.log("hello");
@@ -20,7 +18,6 @@ moonButton.addEventListener("click", ()=> {
             introBoxHide();
             document.querySelector("#moon").style.visibility="visible";  
             document.querySelector("#crescentMoon").style.visibility="hidden";  
-            
         })
     }
 })
@@ -30,11 +27,11 @@ moonButton.addEventListener("click", ()=> {
 function introBox() {
     const tl = gsap.timeline({ defaults: { duration: 1 } })
     document.querySelector(".introTextBox").style.visibility="visible";
-    tl.to('.introTextBox', {x: '+=-50px', ease: "power4.out", opacity: 1 })
+    tl.to('.introTextBox', {x: '-50px', ease: "power4.out", opacity: 1 })
 }
 function introBoxHide() {
     const t2 = gsap.timeline({ defaults: {duration: 1} })
-    t2.to('.introTextBox', {x: '+=50px', ease: "power4.out", opacity: 0 })
+    t2.to('.introTextBox', {x: '50px', ease: "power4.out", opacity: 0 })
 }
 
 
