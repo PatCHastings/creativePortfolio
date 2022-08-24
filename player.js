@@ -23,3 +23,6 @@ get hud() {
     return this._hud
 }
 }
+
+
+export default Player();

@@ -1,4 +1,5 @@
 import Elements from "./elements.js"
+import Timer from "./timer.js";
 
 const fullmoonEl = document.querySelector("#moon");
 const crescentMoonEl = document.getElementById("crescentMoon");
@@ -33,6 +34,16 @@ function introBoxHide() {
     const t2 = gsap.timeline({ defaults: {duration: 1} })
     t2.to('.introTextBox', {x: '50px', ease: "power4.out", opacity: 0 })
 }
+
+
+
+// let startTimeButton = document.getElementById('startTimer'); 
+// startTimeButton.addEventListener("click", ()=> {
+//     startTimer();
+// })
+
+
+
 
 
 
