@@ -113,9 +113,7 @@ section {
     top: 25%;
     display: flex;
     flex-direction: row;
-    color: white;
-    background-image: linear-gradient(to right, rgba(64, 30, 255, 0.527) , rgba(31, 0, 168, 0));
-    
+    background-image: linear-gradient(to right, rgba(64, 30, 255, 0.562) , rgba(31, 0, 168, 0));
     /* border: 2px solid white; */
     border-radius: 5px;
     padding: 8px 8px 8px 8px;
@@ -134,7 +132,17 @@ section {
     width: 65%;
     top: 15%;
     word-wrap: break-word;
-    
+    font-size: 1.1rem;
+    color: aliceblue;
+    text-shadow: 0 0 2px black;
+}
+button{
+    color: rgb(255, 255, 255);
+    background: #0099ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;  
 }
 
 #startgameStar {
@@ -171,5 +179,15 @@ section {
 .btn-group {
     
     pointer-events: auto; 
+}
+
+#time {
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+
 }
   

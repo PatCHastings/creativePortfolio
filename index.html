@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="wrapper">
         <header>
-            <div id="">Prepare for battle in: <span id="time">05:00</span> minutes!</div>
             <div id="startgameStar"></div>
             <img id="moon" src="/images/fullmoonBlue.png" >  
             <img id="crescentMoon" src="/images/crescentMoon.png"> 
@@ -22,9 +22,13 @@
                 <img class="defaultHeadshot" src="/images/headshot-transparent-small.png">
                 <p class="introText">Hello, I am Software Developer Patrick Hastings; Welcome to my portfolio. 
                     Travel this site and gain as much knowledge about me and my work as you can.. for I should warn, 
-                    there are dangers that lurk here, and it is not safe without the proper experience.. are you prepared? 
+                    there are dangers that lurk here, and it is not safe without the proper experience.. 
+                    Do you wish to continue? 
+                </p>
+                <p class="introYes">That's great to hear. I wish you luck on your journey. Strength comes from experience
+                    and you would do well to become stronger before time runs out..
                 </p> 
-                <button id="yesButton"></button>
+                <button id="yesButton">yes!</button>
             </div>
             
         </header>
@@ -35,6 +39,9 @@
             think-up and successfully implement. Please feel free to share your ideas.
         </section>  
         
+    </div>
+    <div>
+        <div id="time">Prepare for battle in: <span>05:00</span> minutes!</div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
             integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="

@@ -17,7 +17,6 @@ moonButton.addEventListener("click", ()=> {
         crescentmoonButton.addEventListener("click", ()=> {
             console.log("ello gov");
             introBoxHide();
-            startTimer();
             document.querySelector("#moon").style.visibility="visible";  
             document.querySelector("#crescentMoon").style.visibility="hidden";  
         })
@@ -36,12 +35,11 @@ function introBoxHide() {
     t2.to('.introTextBox', {x: '50px', ease: "power4.out", opacity: 0 })
 }
 
-
-
-// let yesButton = document.getElementById('yesTimer'); 
-// yesButton.addEventListener("click", ()=> {
-//     startTimer();
-// })
+document.querySelector(".introYes").textContent="hidden"; 
+let yesBtn = document.getElementById('yesTimer'); 
+yesBtn.addEventListener("click", ()=> {
+    startTimer();
+})
 
 
 
