@@ -46,8 +46,9 @@ yesBtn.addEventListener("click", ()=> {
     textEl.innerHTML = `<p>That's great to hear. I wish you luck on your journey. Strength comes from experience
     and you would do well to become stronger before time runs out..</p>`
     startTimer();
-    document.querySelector("#yesButton").style.visibility="hidden";
-    document.querySelector("#noButton").style.visibility="hidden";
+    document.querySelector("#startgameStar").style.visibility="visible";
+    document.querySelector("#yesButton").style.display="none";
+    document.querySelector("#noButton").style.display="none";
     document.querySelector("#time").style.visibility="visible";
     
 })
@@ -56,11 +57,15 @@ let noBtn = document.getElementById('noButton');
 let textElB = document.getElementById('introText');
 noBtn.addEventListener("click", ()=> {
     textElB.innerHTML = `<p>Uh oh... look out!!</p>`
-    document.querySelector("#yesButton").style.visibility="hidden";
-    document.querySelector("#noButton").style.visibility="hidden";
+    document.querySelector("#yesButton").style.display="none";
+    document.querySelector("#noButton").style.display="none";
 })
 
-
+document.querySelector("#startgameStar").style.visibility="hidden"; 
+let starBtn = document.getElementById('startgameStar');
+starBtn.addEventListener("click", ()=> {
+console.log("wtf");
+})
 
 
 
