@@ -61,10 +61,13 @@ noBtn.addEventListener("click", ()=> {
     document.querySelector("#noButton").style.display="none";
 })
 
+document.querySelector("#hud").style.visibility="hidden";
 document.querySelector("#startgameStar").style.visibility="hidden"; 
 let starBtn = document.getElementById('startgameStar');
 starBtn.addEventListener("click", ()=> {
 console.log("wtf");
+document.querySelector("#hud").style.visibility="visible";
+document.querySelector("#startgameStar").style.display="none"
 })
 
 
