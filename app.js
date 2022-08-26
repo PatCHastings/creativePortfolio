@@ -1,8 +1,12 @@
 import Elements from "./elements.js"
 import Timer from "./timer.js";
+import Player from "./player.js";
 
+const player = new Player();
 const fullmoonEl = document.querySelector("#moon");
 const crescentMoonEl = document.getElementById("crescentMoon");
+const expEl = document.querySelector('#exp');
+const hpEl = document.querySelector('#hp');
 
 
 document.querySelector("#yesButton").style.visibility="hidden";  
@@ -65,12 +69,32 @@ document.querySelector("#hud").style.visibility="hidden";
 document.querySelector("#startgameStar").style.visibility="hidden"; 
 let starBtn = document.getElementById('startgameStar');
 starBtn.addEventListener("click", ()=> {
-console.log("wtf");
-document.querySelector("#hud").style.visibility="visible";
-document.querySelector("#startgameStar").style.display="none"
+    console.log("wtf");
+    document.querySelector("#hud").style.visibility="visible";
+    document.querySelector("#startgameStar").style.display="none"
 })
 
-
-
-
-
+document.querySelector("#clickHud").style.visibility="hidden"; 
+let hudBtn = document.querySelector("#hud");
+hudBtn.addEventListener("click", ()=> {
+    clickHudDisp();
+    expEl.innerHTML = player._exp;
+    hpEl.innerHTML = player._hp;
+    if (document.querySelector("#clickHud").style.visibility="visible") {
+        hudBtn.addEventListener("click", ()=> {
+            clickHudHide();
+        })
+    }
+    
+})
+function clickHudDisp() {
+    const tl = gsap.timeline({ defaults: { duration: .75} })
+    document.querySelector("#clickHud").style.visibility="visible";
+    tl.to('#clickHud', {x: '10px', ease: "power4.out", opacity: 1 })
+}
+function clickHudHide() {
+    const tl = gsap.timeline({ defaults: { duration: .75} })
+    
+    tl.to('#clickHud', {x: '-10px', ease: "power4.out", opacity: 0 })
+    document.querySelector("#clickHud").style.visibility="hidden";
+}

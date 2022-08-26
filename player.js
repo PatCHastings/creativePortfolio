@@ -7,7 +7,7 @@ constructor() {
     this._hud = false;
 }
 
-get _exp() {
+get exp() {
     return this._exp
 }
 get lvl() {
@@ -22,7 +22,19 @@ get mp() {
 get hud() {
     return this._hud
 }
+
+tickExp() {
+    this._exp ++;
+}
+tickLvl() {
+    this._lvl ++;
+}
+tickHp() {
+    this._hp ++;
 }
 
 
-export default Player();
+}
+
+
+export default Player;
