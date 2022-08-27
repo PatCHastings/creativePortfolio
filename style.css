@@ -10,6 +10,10 @@ nav {
 nav .navbar{
     align-content: center;
 }
+nav a:hover{
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+    transition: .5s ease-in-out;
+}
 a {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -282,6 +286,7 @@ p{
 }
 #hud:hover {
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+    transition: .5s ease-in-out;
 }
 #clickHud {
     position: fixed;
