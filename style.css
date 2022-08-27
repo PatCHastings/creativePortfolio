@@ -1,7 +1,7 @@
 nav {
     display: inline-flex;
     flex-direction: row;
-    background-color: grey;
+    background-color: rgba(66, 57, 110, 0.662);
     /* opacity: .75; */
     width: 100%;
     align-items: center;
@@ -279,6 +279,9 @@ p{
     /* border: 2px solid white; */
     border-radius: 5px;
     padding: 8px 8px 8px 8px;
+}
+#hud:hover {
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
 #clickHud {
     position: fixed;
