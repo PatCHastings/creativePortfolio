@@ -74,32 +74,6 @@ starBtn.addEventListener("click", ()=> {
     document.querySelector("#startgameStar").style.display="none"
 })
 
-// document.querySelector("#clickHud").style.visibility="hidden"; 
-
-
-// hudBtn.addEventListener("click", ()=> {
-// if (clickHudEl.style.visibility==="hidden") {
-//         clickHudDisp();
-//     } 
-// })    
-// hudBtn.addEventListener("click", ()=> {
-// if (clickHudEl.style.visibility==="visible") {
-//         clickHudHide();        
-//     }
-// })
-function clickHudDisp() {
-    const tl = gsap.timeline({ defaults: { duration: .75} })
-    document.querySelector("#clickHud").style.visibility="visible";
-    expEl.innerHTML = player._exp;
-    hpEl.innerHTML = player._hp;
-    tl.to('#clickHud', {x: '10px', ease: "power4.out", opacity: 1 })
-}
-function clickHudHide() {
-    const tl = gsap.timeline({ defaults: { duration: .75} })
-    
-    tl.to('#clickHud', {x: '-10px', ease: "power4.out", opacity: 0 })
-    document.querySelector("#clickHud").style.visibility="hidden";
-}
 
 document.querySelector("#clickHud").style.display = 'none';
 let hudBtn = document.getElementById('hud');
@@ -109,15 +83,12 @@ hudBtn.onclick = function() {
         const tl = gsap.timeline({ defaults: { duration: .75} })
         tl.to('#clickHud', {x: '-10px', ease: "power4.out", opacity: 0 })
         clickHudEl.style.display = 'none';
-        
     } 
     else {
-        
         const tl = gsap.timeline({ defaults: { duration: .75} })
         tl.to('#clickHud', {x: '10px', ease: "power4.out", opacity: 1 })
         expEl.innerHTML = player._exp;
         hpEl.innerHTML = player._hp;
         clickHudEl.style.display = 'block';
-        
     }
 }
