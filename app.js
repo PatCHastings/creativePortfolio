@@ -93,8 +93,13 @@ hudBtn.onclick = function() {
     else {
         const tl = gsap.timeline({ defaults: { duration: .75} })
         tl.to('#clickHud', {x: '10px', ease: "power4.out", opacity: 1 })
-        expEl.innerHTML = player._exp;
-        hpEl.innerHTML = player._hp;
+        
         clickHudEl.style.display = 'block';
     }
+}
+
+let homeBtn = document.querySelector(".nav-home");
+homeBtn.onclick = function() {
+    player.clickExp();
+    expEl.innerHTML = player._exp;
 }

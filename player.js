@@ -33,6 +33,9 @@ tickHp() {
     this._hp ++;
 }
 
+clickExp() {
+    this._exp += 5;
+}
 
 }
 
