@@ -69,10 +69,26 @@ header {
     z-index: -1;
 }
 .backgroundSkyline0 {
-    transform: translateZ(-7px) scale(1);
+    transform: translateZ(-8px) scale(1);
     position: absolute;
-    width: 170%;
-    bottom: -250%;
+    width: 180%;
+    bottom: -240%;
+    object-fit: cover;
+    z-index: 1;
+}
+.backgroundSkyline1 {
+    transform: translateZ(-4.5px) scale(1.2);
+    position: absolute;
+    width: 140%;
+    bottom: -260%;
+    object-fit: cover;
+    z-index: 1;
+}
+.backgroundSkyline2 {
+    transform: translateZ(-1px) scale(1.3);
+    position: absolute;
+    width: 110%;
+    bottom: -305%;
     object-fit: cover;
     z-index: 1;
 }
