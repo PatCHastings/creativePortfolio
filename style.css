@@ -68,6 +68,14 @@ header {
     object-fit: cover;
     z-index: -1;
 }
+.backgroundSkyline0 {
+    transform: translateZ(-7px) scale(1);
+    position: absolute;
+    width: 170%;
+    bottom: -250%;
+    object-fit: cover;
+    z-index: 1;
+}
 .clouds {
     transform: translateZ(-5px) scale(1.1);
     position: relative;
