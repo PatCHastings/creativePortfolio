@@ -71,10 +71,10 @@ document.querySelector("#startgameStar").style.visibility="hidden";
 let starBtn = document.getElementById('startgameStar');
 starBtn.addEventListener("click", ()=> {
     console.log("starclicked");
-    gsap.fromTo("#hud", {autoAlpha: 0}, {autoAlpha: 1, duration: 1});
+    gsap.fromTo("#hud", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
     document.querySelector("#hud").style.visibility="visible";
         
-    gsap.fromTo(".navBar", {autoAlpha: 0}, {autoAlpha: 1, duration: 1});
+    gsap.fromTo(".navBar", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
     
     document.querySelector(".navBar").style.visibility="visible";
     document.querySelector("#startgameStar").style.display="none";
@@ -86,12 +86,12 @@ let hudBtn = document.getElementById('hud');
 hudBtn.onclick = function() {
     let clickHudEl = document.getElementById('clickHud');
     if (clickHudEl.style.display !== 'none') {
-        const tl = gsap.timeline({ defaults: { duration: .75} })
+        const tl = gsap.timeline({ defaults: { duration: .5} })
         tl.to('#clickHud', {x: '-10px', ease: "power4.out", opacity: 0 })
         clickHudEl.style.display = 'none';
     } 
     else {
-        const tl = gsap.timeline({ defaults: { duration: .75} })
+        const tl = gsap.timeline({ defaults: { duration: .5} })
         tl.to('#clickHud', {x: '10px', ease: "power4.out", opacity: 1 })
         
         clickHudEl.style.display = 'block';
