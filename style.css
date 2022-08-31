@@ -94,6 +94,14 @@ header {
 }
 .backgroundsigns {
     transform: translateZ(2px) scale(1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    pointer-events: none; 
     position: absolute;
     width: 80%;
     bottom: -335%;
