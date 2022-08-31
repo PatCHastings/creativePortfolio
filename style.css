@@ -92,6 +92,15 @@ header {
     object-fit: cover;
     z-index: 1;
 }
+.backgroundsigns {
+    transform: translateZ(2px) scale(1);
+    position: absolute;
+    width: 80%;
+    bottom: -335%;
+    object-fit: cover;
+    z-index: 1;
+
+}
 .clouds {
     transform: translateZ(-5px) scale(1.1);
     position: relative;
