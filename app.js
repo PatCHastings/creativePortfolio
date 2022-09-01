@@ -7,6 +7,7 @@ const fullmoonEl = document.querySelector("#moon");
 const crescentMoonEl = document.getElementById("crescentMoon");
 const expEl = document.querySelector('#exp');
 const hpEl = document.querySelector('#hp');
+const lvlEl = document.querySelector('#lvl');
 
 
 document.querySelector("#yesButton").style.visibility="hidden";  
@@ -102,4 +103,17 @@ let homeBtn = document.querySelector(".nav-home");
 homeBtn.onclick = function() {
     player.clickExp();
     expEl.innerHTML = player._exp;
+    lvlEl.innerHTML = player._lvl;
 }
+
+let portfolioBtn = document.querySelector(".neonTextTitle");
+portfolioBtn.onclick = function() {
+    player.clickExp();
+    expEl.innerHTML = player._exp;
+    lvlEl.innerHTML = player._lvl;
+}
+let playerLvl = player._lvl;
+playerLvl.addEventListener("change", ()=>{
+    if (player._exp >= 100 && player._exp <= 110)
+    console.log("lvl up!");
+})
