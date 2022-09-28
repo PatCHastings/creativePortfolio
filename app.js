@@ -117,11 +117,45 @@ portfolioBtn.onclick = function() {
 //     if (player._exp >= 100 && player._exp <= 110)
 //     console.log("lvl up!");
 // })
-// document.getElementById("codetariLiftoff").style.visibility="hidden";
+document.getElementById("codetariLiftoff").style.visibility="hidden";
 let codetariBtn = document.querySelector(".neonTextProjectOne");
-codetariBtn.addEventListener("click", ()=> {
+codetariBtn.onclick = function() {
+    player.clickExp();
+    
     console.log("clicked codetari");
-    document.getElementById("#codetariLiftoff").style.visibility="visible";
+    document.getElementById("codetariLiftoff").style.visibility="visible";
     document.querySelector(".neonTextProjectOne").style.display="none";
+    expEl.innerHTML = player._exp;
+    lvlEl.innerHTML = player._lvl;
 
-})
+}
+
+document.getElementById("codetariList").style.visibility="hidden";
+let codetariPicBtn = document.getElementById("codetariLiftoff");
+codetariPicBtn.onclick = function() {
+    player.clickExp();
+    console.log("clicked codetariPIC");
+    document.getElementById("codetariList").style.visibility="visible";
+    gsap.fromTo("#codetariList", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
+    expEl.innerHTML = player._exp;
+    lvlEl.innerHTML = player._lvl;
+}
+
+document.getElementById("albumProject").style.visibility="hidden";
+let albumProjectBtn = document.querySelector(".neonTextProjectTwo");
+albumProjectBtn.onclick = function() {
+    player.clickExp();
+    console.log("clicked albumz");
+    document.getElementById("albumProject").style.visibility="visible";
+    document.querySelector(".neonTextProjectTwo").style.display="none";
+}
+document.getElementById("albumProjectList").style.visibility="hidden";
+let albumProjectPicBtn = document.getElementById("albumProject");
+albumProjectPicBtn.onclick = function() {
+    player.clickExp();
+    console.log("clicked albumPIC");
+    document.getElementById("albumProjectList").style.visibility="visible";
+    gsap.fromTo("#albumProjectList", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
+    expEl.innerHTML = player._exp;
+    lvlEl.innerHTML = player._lvl;
+}

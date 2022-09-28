@@ -344,8 +344,8 @@ p{
     position: absolute;
     font-family: Bookman, URW Bookman L, serif;
     font-style: italic;
-    top: 333vh;
-    left: 27vw;
+    top: 340vh;
+    left: 33vw;
     z-index: 1;
     color: #fff;
     font-size: 6vw;
@@ -388,12 +388,13 @@ p{
 
 .neonTextProjectOne {
     position: absolute;
-    top: 364vh;
-    left: 10vw;
+    top: 370vh;
+    left: 12vw;
     z-index: 1;
     color: #fff;
     font-size: 5vw;
     padding: 2rem;
+    pointer-events: auto; 
     text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,
@@ -429,10 +430,62 @@ p{
     0 0 140px rgb(242, 0, 255);
     }
 }
-.codetariLiftoff {
+#codetariLiftoff {
     position: absolute;
+    height: 28%;
+    width: 28%;
+    top: 377vh;
+    left: 11.5vw;
     pointer-events: auto;
     z-index: 1;
+}
+li{
+    list-style: none
+}
+#codetariList {
+    position: absolute;
+    top: 412vh;
+    left: 11vw;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 2rem;
+    margin-bottom: 5px;
+    pointer-events: auto; 
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(242, 0, 255),
+      0 0 82px rgb(242, 0, 255),
+      0 0 92px rgb(242, 0, 255),
+      0 0 102px rgb(242, 0, 255),
+      0 0 151px rgb(242, 0, 255);
+      
+      animation: pulsate1 1s ease-in-out infinite alternate; 
+  }
+@keyframes pulsate1 {
+  100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(242, 0, 255),
+      0 0 80px rgb(242, 0, 255),
+      0 0 90px rgb(242, 0, 255),
+      0 0 100px rgb(242, 0, 255),
+      0 0 150px rgb(242, 0, 255);
+    }
+  0% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px rgb(242, 0, 255),
+    0 0 73px rgb(242, 0, 255),
+    0 0 80px rgb(242, 0, 255),
+    0 0 140px rgb(242, 0, 255);
+    }
 }
 
 .neonTextProjectTwo {
@@ -442,7 +495,8 @@ p{
     z-index: 1;
     color: #fff;
     font-size: 4vw;
-    font-size: 4vh;
+    
+    pointer-events: auto; 
     /* padding: 2rem; */
     text-shadow:
       0 0 7px #fff,
@@ -478,4 +532,112 @@ p{
     0 0 80px rgb(238, 255, 0),
     0 0 140px rgb(238, 255, 0);
     }
+}
+#albumProject{
+    position: absolute;
+    height: 28%;
+    width: 27%;
+    top: 377vh;
+    left: 57.5vw;
+    pointer-events: auto;
+    z-index: 1;
+}
+#albumProjectList {
+    position: absolute;
+    top: 412vh;
+    left: 73.5vw;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 2rem;
+    margin-bottom: 5px;
+    pointer-events: auto; 
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(255, 115, 0),
+      0 0 82px rgb(255, 115, 0),
+      0 0 92px rgb(255, 115, 0),
+      0 0 102px rgb(255, 115, 0),
+      0 0 151px rgb(255, 115, 0);
+      
+      animation: pulsate2 2s ease-in-out infinite alternate; 
+  }
+@keyframes pulsate2 {
+  100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(255, 115, 0),
+      0 0 80px rgb(255, 115, 0),
+      0 0 90px rgb(255, 115, 0),
+      0 0 100px rgb(255, 115, 0),
+      0 0 150px rgb(255, 115, 0);
+    }
+  0% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px rgb(238, 255, 0),
+    0 0 73px rgb(238, 255, 0),
+    0 0 80px rgb(238, 255, 0),
+    0 0 140px rgb(238, 255, 0);
+    }
+}
+#boom {
+    animation: hideAnimation 0s ease-in 1.6s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    display: none;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10000;
+    height: 300px;
+    width: 300px;
+}
+
+@keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
+#albumProjectScreen {
+    content: "";
+    position: absolute;
+    top: 377vh;
+    left: 57.5vw;
+    height: 28%;
+    width: 27%;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 2;
+}
+#codetariScreen {
+    content: "";
+    position: absolute;
+    height: 28%;
+    width: 28%;
+    top: 377vh;
+    left: 11.5vw;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 2;
+}
+#albumProjectListScreen {
+    content: "";
+    position: absolute;
+    top: 416vh;
+    left: 74vw;
+    height: 50%;
+    width: 11%;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 2;
 }

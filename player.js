@@ -35,6 +35,9 @@ tickHp() {
 
 clickExp() {
     this._exp += 5;
+    if (this._exp >= 100) {
+        this._lvl++; 
+    }
 }
 
 }
