@@ -3,7 +3,7 @@ nav {
     flex-direction: row;
     background-color: rgba(66, 57, 110, 0.662);
     /* opacity: .75; */
-    width: 100%;
+    width: 100vw;
     align-items: center;
     padding: 4px;
 }
@@ -44,7 +44,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     transform-style: preserve-3d;
     z-index: -1;
     pointer-events: none; 
@@ -64,31 +64,31 @@ header {
 .foreground {
     position: absolute;
     /* height: 100%; */
-    width: 101%;
+    width: 100vw;
     object-fit: cover;
     z-index: -1;
 }
 .backgroundSkyline0 {
     transform: translateZ(-8px) scale(1);
     position: absolute;
-    width: 181%;
-    bottom: -260%;
+    width: 180vw;
+    bottom: -260vh;
     object-fit: cover;
     z-index: 1;
 }
 .backgroundSkyline1 {
     transform: translateZ(-4px) scale(1.2);
     position: absolute;
-    width: 140%;
-    bottom: -280%;
+    width: 140vw;
+    bottom: -280vh;
     object-fit: cover;
     z-index: 1;
 }
 .backgroundSkyline2 {
     transform: translateZ(-1px) scale(1.3);
     position: absolute;
-    width: 110%;
-    bottom: -385%;
+    width: 110vw;
+    bottom: -385vh;
     object-fit: cover;
     z-index: 1;
 }
@@ -98,12 +98,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 0%;
+    left: 0vw;
     transform-style: preserve-3d;
     z-index: 1;
     pointer-events: none; 
-    width: 100%;
-    bottom: -375%;
+    width: 100vw;
+    bottom: -375vh;
     object-fit: cover;
     z-index: 1;
 
@@ -111,8 +111,8 @@ header {
 .clouds {
     transform: translateZ(-5px) scale(1.1);
     position: relative;
-    width: 100%; 
-    top: -60%;
+    width: 100vw; 
+    top: 5vh;
     object-fit: cover;
     z-index: -1;
     
@@ -121,17 +121,17 @@ header {
 #moon {
     transform: translateZ(-7px) scale(1.75);
     position: absolute;
-    width: 20%;
-    left: 75%;
-    top: 20%;
+    width: 20vw;
+    left: 75vw;
+    top: 20vh;
     z-index: 1;   
     pointer-events: auto; 
 }
 #moon:hover {
     transform: translateZ(-7px) scale(1.85);
     position: absolute;
-    width: 20%;
-    left: 75%;
+    width: 20vw;
+    left: 75vw;
     z-index: 1;  
     cursor: pointer;
      -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
@@ -142,9 +142,9 @@ header {
     visibility: hidden;
     transform: rotate(-40deg) translateZ(-7px) scale(1.75);
     position: absolute;
-    width: 20%;
-    left: 75%;
-    top: 20%;
+    width: 20vw;
+    left: 75vw;
+    top: 20vh;
     z-index: 1; 
     pointer-events: auto; 
 }
@@ -186,8 +186,8 @@ p{
     transform: translateZ(-5px) scale(1.70);;
     visibility: hidden;
     position: absolute;
-    width: 35%;
-    top: 25%;
+    width: 50vw;
+    top: 25vh;
     display: flex;
     flex-direction: row;
     background-image: linear-gradient(to right, rgba(64, 30, 255, 0.562) , rgba(31, 0, 168, 0));
@@ -196,20 +196,21 @@ p{
     padding: 8px 8px 8px 8px;
     /* box-shadow: 5px 5px 3px rgb(0, 0, 0); */
 }
-.introTextBox .defaultHeadshot {
+.defaultHeadshot {
+    position: relative;
     display: flex;
     flex-direction: row;
-    width: 35%;
+    width: 20vw;
+    height: 45vh;
 	
 }
-.introTextBox .introText {
+#introText {
     position: relative;
-    display: inline-block;
+    display: flex;
     flex-direction: row;
-    width: 65%;
-    top: 15%;
-    word-wrap: break-word;
-    font-size: 1.1rem;
+    pointer-events: none;
+    /* word-wrap: break-word; */
+    font-size: 1rem;
     color: aliceblue;
     text-shadow: 0 0 2px black;
 }
@@ -220,8 +221,8 @@ p{
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 30%;
-    left: 55%;
+    bottom: 30vh;
+    left: 55vw;
     font-size: 1rem;  
     z-index: 1;   
     pointer-events: auto; 
@@ -241,8 +242,8 @@ p{
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 30%;
-    left: 62%;
+    bottom: 30vh;
+    left: 62vw;
     margin: auto; 
     font-size: 1rem;   
     z-index: 1;   
@@ -262,8 +263,8 @@ p{
     pointer-events: auto;
     display: flex;
     position: absolute;
-    left: 90%;
-    top: 5%;
+    left: 90vw;
+    top: 5vh;
     width: 40px;
     height: 40px;
     z-index: 1;  
@@ -299,8 +300,8 @@ p{
 #time {
     position: fixed;
     color: white;
-    bottom: 3%;
-    left: 90%;
+    bottom: 3vh;
+    left: 90vw;
     height: 40px;
     font-size: 2rem;
     background-image: linear-gradient(to right, rgba(29, 25, 53, 0.477) , rgba(34, 24, 78, 0.362));
@@ -313,9 +314,8 @@ p{
 #hud {
     position: fixed;
     color: white;
-    bottom: 3%;
-    right: 90%;
-    height: 40px;
+    bottom: 3vh;
+    right: 90vw;
     font-size: 2rem;
     background-image: linear-gradient(to right, rgba(29, 25, 53, 0.477) , rgba(34, 24, 78, 0.362));
     /* border: 2px solid white; */
@@ -329,9 +329,9 @@ p{
 #clickHud {
     position: fixed;
     color: white;
-    bottom: 3%;
-    right: 76%;
-    height: 40px;
+    bottom: 3vh;
+    right: 75vw;
+    
     font-size: 2rem;
     background-image: linear-gradient(to right, rgba(29, 25, 53, 0.477) , rgba(34, 24, 78, 0.362));
     /* border: 2px solid white; */
@@ -344,12 +344,12 @@ p{
     position: absolute;
     font-family: Bookman, URW Bookman L, serif;
     font-style: italic;
-    margin-top: 146%;
-    margin-left: -18%;
+    top: 333vh;
+    left: 27vw;
     z-index: 1;
     color: #fff;
-    font-size: 2rem;
-    padding: 2rem;
+    font-size: 6vw;
+    /* padding: 1rem; */
     pointer-events: auto; 
     text-shadow:
       0 0 7px #fff,
@@ -360,7 +360,6 @@ p{
       0 0 92px rgb(0, 255, 247),
       0 0 102px rgb(0, 255, 247),
       0 0 151px rgb(0, 255, 247);
-      font-size: 6.2rem;
       animation: pulsate 0.11s ease-in-out infinite alternate; 
   }
 @keyframes pulsate {
@@ -389,11 +388,11 @@ p{
 
 .neonTextProjectOne {
     position: absolute;
-    margin-top: 160%;
-    margin-left: -35%;
+    top: 364vh;
+    left: 10vw;
     z-index: 1;
     color: #fff;
-    font-size: 5rem;
+    font-size: 5vw;
     padding: 2rem;
     text-shadow:
       0 0 7px #fff,
@@ -430,15 +429,21 @@ p{
     0 0 140px rgb(242, 0, 255);
     }
 }
+.codetariLiftoff {
+    position: absolute;
+    pointer-events: auto;
+    z-index: 1;
+}
 
 .neonTextProjectTwo {
     position: absolute;
-    margin-top: 160%;
-    margin-left: 9%;
+    top: 375vh;
+    left: 58.3vw;
     z-index: 1;
     color: #fff;
-    font-size: 5rem;
-    padding: 2rem;
+    font-size: 4vw;
+    font-size: 4vh;
+    /* padding: 2rem; */
     text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,

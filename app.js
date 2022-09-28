@@ -112,8 +112,16 @@ portfolioBtn.onclick = function() {
     expEl.innerHTML = player._exp;
     lvlEl.innerHTML = player._lvl;
 }
-let playerLvl = player._lvl;
-playerLvl.addEventListener("change", ()=>{
-    if (player._exp >= 100 && player._exp <= 110)
-    console.log("lvl up!");
+// let playerLvl = player._lvl;
+// playerLvl.addEventListener("change", ()=>{
+//     if (player._exp >= 100 && player._exp <= 110)
+//     console.log("lvl up!");
+// })
+// document.getElementById("codetariLiftoff").style.visibility="hidden";
+let codetariBtn = document.querySelector(".neonTextProjectOne");
+codetariBtn.addEventListener("click", ()=> {
+    console.log("clicked codetari");
+    document.getElementById("#codetariLiftoff").style.visibility="visible";
+    document.querySelector(".neonTextProjectOne").style.display="none";
+
 })
