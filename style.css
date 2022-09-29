@@ -386,6 +386,8 @@ p{
     }
 }
 
+
+
 .neonTextProjectOne {
     position: absolute;
     top: 370vh;
@@ -487,6 +489,50 @@ li{
     0 0 140px rgb(242, 0, 255);
     }
 }
+#codetariScreen {
+    content: "";
+    position: absolute;
+    height: 28%;
+    width: 28%;
+    top: 377vh;
+    left: 11.5vw;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 2;
+}
+#staticCodetariScreen {
+    position: absolute;
+    height: 28%;
+    width: 28%;
+    top: 377vh;
+    left: 11.5vw;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+}
+#codetariListScreen {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 9.5%;
+    top: 415vh;
+    left: 12vw;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 2;
+}
+#staticCodetariListScreen {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 9.5%;
+    top: 415vh;
+    left: 12vw;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+}
+
 
 .neonTextProjectTwo {
     position: absolute;
@@ -587,27 +633,6 @@ li{
     0 0 140px rgb(238, 255, 0);
     }
 }
-#boom {
-    animation: hideAnimation 0s ease-in 1.6s;
-    animation-fill-mode: forwards;
-    position: absolute;
-    display: none;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 10000;
-    height: 300px;
-    width: 300px;
-}
-
-@keyframes hideAnimation {
-    to {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
-  }
-
 #albumProjectScreen {
     content: "";
     position: absolute;
@@ -619,16 +644,16 @@ li{
     pointer-events: none;
     z-index: 2;
 }
-#codetariScreen {
+#staticAlbumProjectScreen {
     content: "";
     position: absolute;
-    height: 28%;
-    width: 28%;
     top: 377vh;
-    left: 11.5vw;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    left: 57.5vw;
+    height: 28%;
+    width: 27%;
     pointer-events: none;
     z-index: 2;
+    opacity: 0;
 }
 #albumProjectListScreen {
     content: "";
@@ -641,14 +666,115 @@ li{
     pointer-events: none;
     z-index: 2;
 }
-#codetariListScreen {
+#staticAlbumProjectListScreen {
     content: "";
     position: absolute;
+    top: 416vh;
+    left: 74vw;
     height: 50%;
-    width: 9.5%;
-    top: 415vh;
-    left: 12vw;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    width: 11%;
     pointer-events: none;
     z-index: 2;
+    opacity: 0;
+}
+
+
+
+.neonTextProjectThree {
+    position: absolute;
+    top: 370vh;
+    left: 12vw;
+    z-index: 1;
+    color: #fff;
+    font-size: 5vw;
+    padding: 2rem;
+    pointer-events: auto; 
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(242, 0, 255),
+      0 0 82px rgb(242, 0, 255),
+      0 0 92px rgb(242, 0, 255),
+      0 0 102px rgb(242, 0, 255),
+      0 0 151px rgb(242, 0, 255);
+      
+      animation: pulsate3 1s ease-in-out infinite alternate; 
+  }
+@keyframes pulsate3 {
+  100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(242, 0, 255),
+      0 0 80px rgb(242, 0, 255),
+      0 0 90px rgb(242, 0, 255),
+      0 0 100px rgb(242, 0, 255),
+      0 0 150px rgb(242, 0, 255);
+    }
+  0% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px rgb(242, 0, 255),
+    0 0 73px rgb(242, 0, 255),
+    0 0 80px rgb(242, 0, 255),
+    0 0 140px rgb(242, 0, 255);
+    }
+}
+#reviewSite {
+    position: absolute;
+    height: 28%;
+    width: 28%;
+    top: 377vh;
+    left: 11.5vw;
+    pointer-events: auto;
+    z-index: 1;
+}
+#reviewSiteList {
+    position: absolute;
+    top: 412vh;
+    left: 11vw;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 2rem;
+    margin-bottom: 5px;
+    pointer-events: auto; 
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(140, 0, 255),
+      0 0 82px rgb(140, 0, 255),
+      0 0 92px rgb(140, 0, 255),
+      0 0 102px rgb(140, 0, 255),
+      0 0 151px rgb(140, 0, 255);
+      
+      animation: pulsate3 1s ease-in-out infinite alternate; 
+  }
+@keyframes pulsate3 {
+  100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(140, 0, 255),
+      0 0 80px rgb(140, 0, 255),
+      0 0 90px rgb(140, 0, 255),
+      0 0 100px rgb(255, 115, 0),
+      0 0 150px rgb(255, 115, 0);
+    }
+  0% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px rgb(255, 115, 0),
+    0 0 73px rgb(255, 115, 0),
+    0 0 80px rgb(255, 115, 0),
+    0 0 140px rgb(255, 115, 0);
+    }
 }

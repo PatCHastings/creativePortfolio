@@ -119,31 +119,48 @@ portfolioBtn.onclick = function() {
 // })
 document.getElementById("codetariLiftoff").style.visibility="hidden";
 let codetariBtn = document.querySelector(".neonTextProjectOne");
+const tl = gsap.timeline({defaults: {duration: .7}});
 codetariBtn.onclick = function() {
+    tl.to('#staticCodetariScreen', {opacity: 1});
+    tl.to('#staticCodetariScreen', {opacity: 0});
     player.clickExp();
-    
     console.log("clicked codetari");
     document.getElementById("codetariLiftoff").style.visibility="visible";
     document.querySelector(".neonTextProjectOne").style.display="none";
     expEl.innerHTML = player._exp;
-    lvlEl.innerHTML = player._lvl;
+    // lvlEl.innerHTML = player._lvl;
 
 }
-
+document.querySelector(".neonTextProjectThree").style.visibility="hidden";
+document.getElementById("reviewSiteList").style.visibility="hidden";
+document.getElementById("reviewSite").style.visibility="hidden";
 document.getElementById("codetariList").style.visibility="hidden";
 let codetariPicBtn = document.getElementById("codetariLiftoff");
 codetariPicBtn.onclick = function() {
     player.clickExp();
     console.log("clicked codetariPIC");
+    tl.to('#staticCodetariListScreen', {opacity: 1});
+    tl.to('#staticCodetariListScreen', {opacity: 0});
     document.getElementById("codetariList").style.visibility="visible";
     gsap.fromTo("#codetariList", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
     expEl.innerHTML = player._exp;
-    lvlEl.innerHTML = player._lvl;
+    // lvlEl.innerHTML = player._lvl;
+    if (document.querySelector("#codetariLiftoff").style.visibility="visible") {
+        codetariPicBtn.onclick = function() {
+            console.log("make codetariPic invisible");
+            document.getElementById("codetariLiftoff").style.visibility="hidden";
+            document.getElementById("codetariList").style.visibility="hidden";
+            document.querySelector(".neonTextProjectThree").style.visibility="visible";
+            gsap.fromTo(".neonTextProjectThree", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
+        }
+    }
 }
 
 document.getElementById("albumProject").style.visibility="hidden";
 let albumProjectBtn = document.querySelector(".neonTextProjectTwo");
 albumProjectBtn.onclick = function() {
+    tl.to('#staticAlbumProjectScreen', {opacity: 1});
+    tl.to('#staticAlbumProjectScreen', {opacity: 0});
     player.clickExp();
     console.log("clicked albumz");
     document.getElementById("albumProject").style.visibility="visible";
@@ -154,8 +171,21 @@ let albumProjectPicBtn = document.getElementById("albumProject");
 albumProjectPicBtn.onclick = function() {
     player.clickExp();
     console.log("clicked albumPIC");
+    tl.to('#staticAlbumProjectListScreen', {opacity: 1});
+    tl.to('#staticAlbumProjectListScreen', {opacity: 0});
     document.getElementById("albumProjectList").style.visibility="visible";
     gsap.fromTo("#albumProjectList", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
     expEl.innerHTML = player._exp;
-    lvlEl.innerHTML = player._lvl;
+    // lvlEl.innerHTML = player._lvl;
+}
+
+
+let reviewSiteBtn = document.querySelector(".neonTextProjectThree");
+reviewSiteBtn.onclick = function() {
+    tl.to('#staticCodetariScreen', {opacity: 1});
+    tl.to('#staticCodetariScreen', {opacity: 0});
+    document.getElementById("reviewSiteList").style.visibility="visible";
+    gsap.fromTo("#reviewSiteList", {autoAlpha: 0}, {autoAlpha: 1, duration: .5});
+    console.log("clicked reviewsite");
+    document.getElementById("reviewSite").style.visibility="visible";
 }
